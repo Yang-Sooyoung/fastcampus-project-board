@@ -2,13 +2,13 @@ plugins {
 	id 'java'
 	id 'org.springframework.boot' version '2.7.9'
 	id 'io.spring.dependency-management' version '1.0.15.RELEASE'
-	id 'org.jetbrains.kotlin.jvm' version '1.9.20-Beta'
 }
 
 group = 'com.fastcampus'
 version = '0.0.1-SNAPSHOT'
 
 java {
+	sourceCompatibility = '17'
 }
 
 configurations {
