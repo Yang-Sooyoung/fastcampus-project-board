@@ -1,7 +1,7 @@
-package fastcampus.projectboard.repository;
+package com.fastcampus.projectboard.repository;
 
-import fastcampus.projectboard.config.JpaConfig;
-import fastcampus.projectboard.domain.Article;
+import com.fastcampus.projectboard.config.JpaConfig;
+import com.fastcampus.projectboard.domain.Article;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
