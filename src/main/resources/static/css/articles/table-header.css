@@ -1,0 +1,5 @@
+/* 게시글 본문 */
+#article-table > thead a {
+    text-decoration: none;
+    color: black;
+}
