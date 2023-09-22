@@ -18,6 +18,7 @@ import javax.persistence.EntityNotFoundException;
 import java.time.LocalDateTime;
 import java.util.List;
 
+import static com.fastcampus.projectboard.domain.QArticleComment.articleComment;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.BDDMockito.*;
@@ -33,9 +34,9 @@ class ArticleCommentServiceTest {
 
     @DisplayName("게시글 ID로 조회하면, 해당하는 댓글 리스트를 반환한다.")
     @Test
-    void givenArticleId_whenSearchingArticleComments_thenReturnsArticleComments() {
+    void givenArticleId_whenSearchingArticle_thenReturnsArticle() {
         // Given
-        Long articledId = 1L;
+        Long articleId = 1L;
         ArticleComment expected = createArticleComment("content");
         given(articleCommentRepository.findByArticle_Id(articleId)).willReturn(List.of(expected));
 
@@ -59,7 +60,7 @@ class ArticleCommentServiceTest {
         // When
         sut.saveArticleComment(dto);
         // Then
-        assertThat(articleComments).isNotNull();
+        assertThat(articleComment).isNotNull();
         then(articleRepository).should().getReferenceById(dto.articleId());
         then(articleCommentRepository).should().save(any(ArticleComment.class));
     }
