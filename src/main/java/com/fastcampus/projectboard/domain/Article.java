@@ -3,6 +3,7 @@ package com.fastcampus.projectboard.domain;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+
 import javax.persistence.*;
 import java.util.LinkedHashSet;
 import java.util.Objects;
@@ -16,7 +17,6 @@ import java.util.Set;
         @Index(columnList = "createdAt"),
         @Index(columnList = "createdBy")
 })
-
 @Entity
 public class Article extends AuditingFields {
 
@@ -25,12 +25,12 @@ public class Article extends AuditingFields {
     private Long id;
 
     @Setter @ManyToOne(optional = false) @JoinColumn(name = "userId") private UserAccount userAccount; // 유저 정보 (ID)
+
     @Setter @Column(nullable = false) private String title; // 제목
     @Setter @Column(nullable = false, length = 10000) private String content; // 본문
 
     @Setter private String hashtag; // 해시태그
 
-    // 아티클 테이블로부터 온것임을 명시, 실무에서는 안쓰일수도 있음.
     @ToString.Exclude
     @OrderBy("createdAt DESC")
     @OneToMany(mappedBy = "article", cascade = CascadeType.ALL)
@@ -60,4 +60,5 @@ public class Article extends AuditingFields {
     public int hashCode() {
         return Objects.hash(id);
     }
+
 }
