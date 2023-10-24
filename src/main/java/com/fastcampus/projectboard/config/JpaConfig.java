@@ -21,8 +21,6 @@ public class JpaConfig {
                 .map(SecurityContext::getAuthentication)
                 .filter(Authentication::isAuthenticated)
                 .map(Authentication::getPrincipal)
-                .map(x -> (BoardPrincipal) x)
-                .map(BoardPrincipal::getUsername)
                 .map(BoardPrincipal.class::cast)
                 .map(BoardPrincipal::getUsername);
     }
