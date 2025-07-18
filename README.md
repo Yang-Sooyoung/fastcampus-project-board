@@ -1,46 +1,111 @@
-# 게시판 서비스 - 패스트캠퍼스, 10개 프로젝트로 완성하는 백엔드 웹개발
+### 📆 FastCampus Project Board
 
-가장 기본적이고 보편적인 게시판 기능을 둘러볼 수 있는 서비스입니다. 
+> 이 프로젝트는 FastCampus의 게시판 구현 강의를 따라가며 **직접 구현한 학습형 클론 프로젝트**입니다.  
+> 실무에 가까운 게시판 시스템을 Spring Boot와 JPA, QueryDSL을 강의 내용을 기반으로\
+> 기능을 하나하나 구현하고 테스트하며 백엔드 실력을 향상시키는 데 목적이 있습니다.
 
-2022년 6월 기준 가장 최신의 스프링 부트와 관련 기술들, 자바 17 기능들, 개발 도구들을 경험할 수 있도록 만들어졌습니다.
 
-## 개발 환경
+<br/>
 
-* Intellij IDEA Ultimate 2022.1.1 ~ 2022.1.3
-* Java 17
-* Gradle 7.4.1
-* Spring Boot 2.7.0
+### 주요 기능
 
-## 기술 세부 스택
+- 게시글 CRUD
+- 댓글 등록/조회/삭제
+- 게시글 검색 (제목, 본문, 작성자, 해시태그)
+- Spring Security를 활용한 인증/인가
+- 작성자 기반의 수정/삭제 권한 제어
+- RESTful API 설계 및 문서화
+- 테스트 코드 (단위, 통합 테스트)
+- JPA Auditing
 
-Spring Boot
+<br/>
 
-* Spring Boot Actuator
-* Spring Web
-* Spring Data JPA
-* Rest Repositories
-* Rest Repositories HAL Explorer
-* Thymeleaf
-* Spring Security
-* H2 Database
-* MySQL Driver
-* Lombok
-* Spring Boot DevTools
-* Spring Configuration Processor
+### 기술 스택
 
-그 외
+| 구분 | 기술 |
+|------|------|
+| Language | Java 17 |
+| Framework | Spring Boot 3.x |
+| ORM | Spring Data JPA, QueryDSL |
+| Database | H2 (개발용) |
+| Build Tool | Gradle |
+| Test | JUnit 5, Mockito |
+| 인증/보안 | Spring Security |
+| 문서화 | Spring REST Docs |
+| IDE | IntelliJ IDEA |
 
-* QueryDSL 5.0.0
-* Bootstrap 5.2.0-Beta1
-* Heroku
+<br/>
 
-## 데모 페이지
+### 프로젝트 구조
 
-{작성 중}
+```
 
-## 질문, 건의
+src
+└── main
+└── java/com/yangsooyoung/projectboard
+├── config
+├── controller
+├── domain
+├── dto
+├── repository
+├── service
+└── util
 
-프로젝트에 관해 궁금하신 점이나 건의 사항이 있으시다면 아래 항목을 이용해 주세요.
+```
 
-* Issues: 버그 리포트, 제안 사항
-* Discussions: 프로젝트와 관련한 논의와 정보
+<br/>
+
+### Usecase Diagram
+<img width="1060" height="921" alt="123" src="https://github.com/user-attachments/assets/8116d2d1-04be-44a3-99c8-8219946d043e" />
+<br/>
+
+### API Endpoint
+<img width="954" height="467" alt="345" src="https://github.com/user-attachments/assets/03cf4106-1542-4fb7-8069-12d8693f2f8e" />
+
+### 실행 방법
+
+#### 1. 프로젝트 클론
+
+```bash
+git clone https://github.com/Yang-Sooyoung/fastcampus-project-board.git
+cd fastcampus-project-board
+````
+
+#### 2. 실행 방법
+
+```bash
+./gradlew clean build
+./gradlew bootRun
+```
+
+#### 3. 테스트 실행
+
+```bash
+./gradlew test
+```
+
+#### 4. API 문서 확인
+
+Spring REST Docs를 통해 `/build/generated-snippets` 경로에 API 문서 생성됨.
+
+<br/>
+
+### 학습 포인트
+
+* JPA 기반 CRUD와 연관관계 매핑
+* QueryDSL로 복합 조건 검색 구현
+* Spring Security로 인증/인가 처리
+* RESTful한 API 설계 원칙 적용
+* REST Docs 기반 API 문서 자동화
+* 테스트 코드 작성 습관 및 구조 설계
+* Github Project 활용, Commit messages 작성
+
+</br>
+
+#### 🙋‍♀️ 만든 사람
+
+- 👩‍💻 이름: 양수영 (Yang Sooyoung)
+- 🔗 GitHub: [@Yang-Sooyoung](https://github.com/Yang-Sooyoung)
+
+<br/>
+
