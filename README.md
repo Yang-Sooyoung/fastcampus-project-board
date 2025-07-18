@@ -42,7 +42,7 @@
 
 src
 └── main
-└── java/com/yangsooyoung/projectboard
+└── java/com/fastcampus/projectboard
 ├── config
 ├── controller
 ├── domain
