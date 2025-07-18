@@ -41,16 +41,25 @@
 ```
 
 src
-└── main
-└── java/com/fastcampus/projectboard
-├── config
-├── controller
-├── domain
-├── dto
-├── repository
-├── service
-└── util
-
+├── main
+|   ├── java/com/fastcampus/projectboard
+|   |   ├── config
+|   |   ├── controller
+|   |   ├── domain
+|   |   ├── dto
+|   |   ├── repository
+|   |   ├── service
+|   |   └── util
+|   └── resources
+|       ├── static/css/articles
+|       └── images
+└── test/java/com/fastcampus/projectboard
+    ├── config
+    ├── controller
+    ├── dto
+    ├── repository
+    ├── service
+    └── util
 ```
 
 <br/>
